@@ -2,7 +2,7 @@ import java.util.ArrayDeque;
 
 public class Calculator {
 
-    private static final char[] operators = {'+', '-'};
+    private static final char[] operators = {'+', '-', '/'};
 
     public static double calculate(String expression) {
 
@@ -15,6 +15,9 @@ public class Calculator {
                 break;
             case "-":
                 result = Double.parseDouble(rpn.pop()) - Double.parseDouble(rpn.pop());
+                break;
+            case "/":
+                result = Double.parseDouble(rpn.pop()) / Double.parseDouble(rpn.pop());
                 break;
             default:
                 result = 0;
