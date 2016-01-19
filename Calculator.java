@@ -26,7 +26,6 @@ public class Calculator {
         } catch(Exception e) {
             System.out.println("Something is going wrong...");
         }
-
         return result;
 
     }
