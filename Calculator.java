@@ -8,7 +8,7 @@ public class Calculator {
 
         ArrayDeque<String> rpn = getRPN(expression);
         double result = 0;
-
+        try {
         switch (rpn.pop()) {
             case "+":
                 result = Double.parseDouble(rpn.pop()) + Double.parseDouble(rpn.pop());
@@ -22,6 +22,9 @@ public class Calculator {
             default:
                 result = 0;
                 break;
+        }
+        } catch(Exception e) {
+            System.out.println("Something is going wrong...");
         }
 
         return result;
