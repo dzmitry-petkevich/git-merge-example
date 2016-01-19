@@ -20,7 +20,6 @@ public class Calculator {
                 result = 0;
                 break;
         }
-
         return result;
 
     }
